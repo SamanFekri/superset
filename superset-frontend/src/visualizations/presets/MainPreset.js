@@ -81,6 +81,10 @@ import { HandlebarsChartPlugin } from '@superset-ui/plugin-chart-handlebars';
 import { FilterPlugins } from 'src/constants';
 import TimeTableChartPlugin from '../TimeTable';
 
+// custom plugin
+import { SupersetPluginChartHelloWorld } from 'superset-plugin-chart-hello-world';
+
+
 export default class MainPreset extends Preset {
   constructor() {
     const experimentalPlugins = isFeatureEnabled(
@@ -173,6 +177,8 @@ export default class MainPreset extends Preset {
         new EchartsSunburstChartPlugin().configure({ key: 'sunburst_v2' }),
         new HandlebarsChartPlugin().configure({ key: 'handlebars' }),
         new EchartsBubbleChartPlugin().configure({ key: 'bubble_v2' }),
+        // custom plugin
+        new SupersetPluginChartHelloWorld().configure({ key: 'ext-hello-world' }),
         ...experimentalPlugins,
       ],
     });
