@@ -17,7 +17,8 @@
  * under the License.
  */
 import { t, validateNonEmpty } from '@superset-ui/core';
-import { ControlPanelConfig, sections, sharedControls } from '@superset-ui/chart-controls';
+import { ControlPanelConfig, sharedControls } from '@superset-ui/chart-controls';
+// import { ControlPanelConfig, sections, sharedControls } from '@superset-ui/chart-controls';
 
 const config: ControlPanelConfig = {
   /**
@@ -94,9 +95,9 @@ const config: ControlPanelConfig = {
    * - validateNumber: must be an integer or decimal value
    */
 
+  // sections.legacyRegularTime,
   // For control input types, see: superset-frontend/src/explore/components/controls/index.js
   controlPanelSections: [
-    sections.legacyRegularTime,
     {
       label: t('Query'),
       expanded: true,
